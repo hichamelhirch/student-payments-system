@@ -1,0 +1,28 @@
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        Details Payments
+      </mat-card-title>
+      <mat-card-content>
+
+        <pdf-viewer
+          [src]="pdfFileURL"
+          [render-text]="true"
+          [original-size]="true"
+          [rotation]="0"
+          [show-all]="true"
+          [fit-to-page]="true"
+          [zoom]="1"
+          [zoom-scale]="'page-width'"
+          [external-link-target]="'blank'"
+          [autoresize]="true"
+          [show-borders]="true"
+          class="page-viewer"
+          (after-load-complete)="afterLoadComplete($event)"
+        ></pdf-viewer>
+
+      </mat-card-content>
+    </mat-card-header>
+  </mat-card>
+</div>
